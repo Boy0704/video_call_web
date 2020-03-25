@@ -58,7 +58,7 @@ class Web extends CI_Controller {
 	public function kembali($pin)
 	{
 		$this->db->where('pin', $pin);
-		$this->db->update('vc', array('channel'=>create_random(15));
+		$this->db->update('vc', array('channel'=>create_random(15)));
 		redirect('web','refresh');
 	}
 
