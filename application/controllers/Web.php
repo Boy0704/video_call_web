@@ -29,14 +29,17 @@ class Web extends CI_Controller {
 
 			// log_r($selisih_menit);
 			if ($cek_status == '1' ) {
-				echo json_encode(array('hasil'=>'2'));
+				//waktu habis
+				// echo json_encode(array('hasil'=>'2'));
+				echo json_encode(array('hasil'=>'1'));
 			} else {
 				if ($selisih_menit > 5) {
 					//waktu belum sampai
 					echo json_encode(array('hasil'=>'3','jadwal' => $cek_jam));
 				} elseif ($selisih_menit < -10){
 					//jadwal sudah lwat
-					echo json_encode(array('hasil'=>'4'));
+					// echo json_encode(array('hasil'=>'4'));
+					echo json_encode(array('hasil'=>'1'));
 				} else {
 					//waktu masih bisa
 					echo json_encode(array('hasil'=>'1'));
@@ -53,7 +56,7 @@ class Web extends CI_Controller {
 	public function kembali($pin)
 	{
 		$this->db->where('pin', $pin);
-		$this->db->update('vc', array('status_selesai'=>'1'));
+		$this->db->update('vc', array('channel'=>create_random(15));
 		redirect('web','refresh');
 	}
 
