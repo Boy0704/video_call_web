@@ -62,12 +62,12 @@ class Web extends CI_Controller {
 		redirect('web','refresh');
 	}
 
-	public function tes()
+	public function test_query()
 	{
-		if (-10 > -11) {
-			echo "ya";
-		} else {
-			echo "salah";
+		foreach ($this->db->get('vc')->result() as $rw) {
+			$this->db->where('pin', $rw->pin);
+			$this->db->update('vc', array('channel'=>$rw->pin));
+			log_data($this->db->last_query());
 		}
 	}
 
