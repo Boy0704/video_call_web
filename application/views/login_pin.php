@@ -108,7 +108,7 @@
                             console.log("success");
                             if (a.hasil == '1') {
                                 swal("PIN Benar, Halaman Video Call Akan di aktifkan !", "You clicked the button!", "success");
-                                window.location="web/vc/?pin="+pin;
+                                window.location="web/vc/?pin="+a.pin;
                             } else if(a.hasil == '2') {
                                 swal("PIN Sudah di gunakan, Silahkan Melakukan Pendaftaran Ulang untuk mendapatkan PIN !", "You clicked the button!", "warning");
                                 $('#pin').val('');
