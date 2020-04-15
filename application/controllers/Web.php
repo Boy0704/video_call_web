@@ -16,7 +16,7 @@ class Web extends CI_Controller {
 
 	public function cek_pin($pin)
 	{
-		echo json_encode(array('hasil'=>'1'));
+		// echo json_encode(array('hasil'=>'1'));
 
 		$db_lsima = $this->load->database('db_lsima', TRUE);
 
