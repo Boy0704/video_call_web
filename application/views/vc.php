@@ -14,6 +14,14 @@
 
 <?php 
 $id = $_GET['pin'];
+if ($id == 'undefined') {
+	?>
+	<script type="text/javascript">
+		alert('Pin tidak berlaku, silahkan coba lagi');
+		window.location='<?php echo base_url() ?>';
+	</script>
+	<?php
+}
  ?>	
 
 <a href="web/kembali/<?php echo $id ?>" class="btn btn-block btn-primary" id="kembali"> KEMBALI</a>
